@@ -1,0 +1,13 @@
+CREATE USER 'springstudent'@'%' IDENTIFIED BY 'springstudent';
+
+GRANT ALL PRIVILEGES ON student.* TO 'springstudent'@'%';
+FLUSH PRIVILEGES;
+
+CREATE TABLE SINHVIEN (
+    MaSV INT AUTO_INCREMENT PRIMARY KEY,
+    Ngaysinh DATETIME,
+    Hoten VARCHAR(255),
+    gioitinh VARCHAR(10)
+);
+
+INSERT INTO SINHVIEN (Hoten, Ngaysinh, gioitinh) VALUES ('Nguyễn Văn A', '2004-12-21', 'M');
